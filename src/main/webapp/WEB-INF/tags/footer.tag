@@ -1,0 +1,1 @@
+<span id="footer">hibernateOptional by <a href="http://www.highwise.com">Highwise</a></span>
