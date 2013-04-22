@@ -15,7 +15,7 @@ public class OptionUserTypeTest {
     private PreparedStatement preparedStatementMock = mock(PreparedStatement.class, RETURNS_MOCKS);
 
     @Test
-    public void testNullSafeSet() throws Exception {
+    public void null_safe_set_should_call_setString_once() throws Exception {
 
         Object o = Option.fromString(EXPECTED_EMAIL);
 
@@ -23,6 +23,12 @@ public class OptionUserTypeTest {
         optionUserType.nullSafeSet(preparedStatementMock, o, INDEX);
 
         verify(preparedStatementMock).setString(1, EXPECTED_EMAIL);
+
+    }
+
+
+    @Test
+    public void null_safe_get_should_return_optional() throws Exception {
 
     }
 }
