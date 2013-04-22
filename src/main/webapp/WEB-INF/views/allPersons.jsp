@@ -16,12 +16,14 @@
 				<th>Name</th>
 				<th>Age</th>
 				<th>Senior Citizen</th>
+				<th>Email</th>
 			</tr>
 			<c:forEach var="person" items="${persons}">
 				<tr class="${person.age gt 70 ? 'senior' : 'junior'}">
 					<td><c:out value="${person.name}"/></td>
 					<td>${person.age}</td>
 					<td>${person.age gt 70}</td>
+					<td>${person.email.isSome()}</td>
 				</tr>
 			</c:forEach>
 		</table>
